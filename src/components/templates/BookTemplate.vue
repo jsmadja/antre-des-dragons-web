@@ -12,13 +12,14 @@
           <template v-slot:title>
             <div id="pip-icon" />
           </template>
+          <PipTemplate :pip="step.pip" />
         </b-tab>
         <b-tab title="Inventaire">
           <template v-slot:title>
             <div id="inventory-icon" />
           </template>
-          <p>I'm a disabled tab!</p></b-tab
-        >
+          <InventoryTemplate :pip="step.pip" />
+        </b-tab>
         <b-tab title="Cartes">
           <template v-slot:title>
             <div id="maps-icon" />
@@ -28,6 +29,7 @@
           <template v-slot:title>
             <div id="logs-icon" />
           </template>
+          <LogsTemplate :entries="step.logEntries" />
         </b-tab>
         <b-tab>
           <template v-slot:title>
@@ -42,10 +44,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import PageTemplate from "./PageTemplate.vue";
+import PipTemplate from "./PipTemplate.vue";
+import LogsTemplate from "./LogsTemplate.vue";
+import InventoryTemplate from "./InventoryTemplate.vue";
 import { Step } from "@/types";
 
 @Component({
-  components: { PageTemplate }
+  components: { PageTemplate, PipTemplate, InventoryTemplate, LogsTemplate }
 })
 export default class BookTemplate extends Vue {
   @Prop() private step!: Step;

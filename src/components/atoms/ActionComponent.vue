@@ -1,8 +1,12 @@
 <template>
-  <b-link :href="action.url">
+  <b-link class="action" :href="action.url">
     <b-button block variant="primary">
       {{ action.answer ? action.answer + " - " : "" }}
-      {{ action.question ? action.question : "Suivant" }}
+      {{
+        action.question
+          ? action.question
+          : `Aller au chapitre ${action.chapter}`
+      }}
     </b-button>
   </b-link>
 </template>
@@ -16,3 +20,10 @@ export default class ActionComponent extends Vue {
   @Prop() action!: Action;
 }
 </script>
+
+<style lang="scss" scoped>
+.action {
+  margin-bottom: 1rem;
+  display: block;
+}
+</style>

@@ -2,9 +2,10 @@ import { storiesOf } from "@storybook/vue";
 import BookTemplate from "./BookTemplate.vue";
 import step9 from "./step-9.json";
 import step7 from "./step-7.json";
+import step4 from "./step4.json";
 
 storiesOf("BookTemplate", module)
-  .add("BookTemplate/Step9", () => ({
+  .add("BookTemplate/Step-9", () => ({
     components: { BookTemplate },
     template: `
             <book-template :step="step" />`,
@@ -14,13 +15,23 @@ storiesOf("BookTemplate", module)
       };
     }
   }))
-  .add("BookTemplate/Step7", () => ({
+  .add("BookTemplate/Step-7", () => ({
     components: { BookTemplate },
     template: `
-                <book-template :step="step" />`,
+            <book-template :step="step" />`,
     data() {
       return {
         step: step7
+      };
+    }
+  }))
+  .add("BookTemplate/Step4", () => ({
+    components: { BookTemplate },
+    template: `
+        <book-template :step="step" />`,
+    data() {
+      return {
+        step: step4
       };
     }
   }));

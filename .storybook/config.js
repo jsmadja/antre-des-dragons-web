@@ -1,7 +1,7 @@
 import '../src/plugins/bootstrap-vue';
 /* eslint-disable import/no-extraneous-dependencies */
 import {addDecorator, configure} from '@storybook/vue'
-import '../src/App';
+import '../src/App.scss';
 
 const req = require.context('../src/', true, /.stories.([tj])s$/);
 

@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook  -s ./public -p 6006"
+    "storybook": "start-storybook  -s ./public -p 6006",
+    "docker:build": "npm run build && docker build -t jsmadja/antre-des-dragons-web .",
+    "docker:push": "docker push jsmadja/antre-des-dragons-web"
   },
   "dependencies": {
     "bootstrap-vue": "^2.1.0",

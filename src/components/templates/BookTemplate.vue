@@ -35,6 +35,7 @@
           <template v-slot:title>
             <div id="fight-icon" />
           </template>
+          <FightTemplate :foes="step.foes" />
         </b-tab>
       </b-tabs>
     </div>
@@ -47,10 +48,17 @@ import PageTemplate from "./PageTemplate.vue";
 import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
 import InventoryTemplate from "./InventoryTemplate.vue";
+import FightTemplate from "./FightTemplate.vue";
 import { Step } from "@/types";
 
 @Component({
-  components: { PageTemplate, PipTemplate, InventoryTemplate, LogsTemplate }
+  components: {
+    PageTemplate,
+    PipTemplate,
+    InventoryTemplate,
+    LogsTemplate,
+    FightTemplate
+  }
 })
 export default class BookTemplate extends Vue {
   @Prop() private step!: Step;

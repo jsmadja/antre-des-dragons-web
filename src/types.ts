@@ -2,6 +2,10 @@ export interface Pip {
   currentHealthPoints: number;
 }
 
+export interface Entity {
+  name: string;
+}
+
 export interface Action {
   url: string;
   question: string;

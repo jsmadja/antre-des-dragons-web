@@ -22,7 +22,7 @@ export default class Book extends Vue {
 
   async fetchStep() {
     const { chapterNumber, questionId, answer } = this.$route.params;
-    let input = "http://localhost:8080/api";
+    let input = "/api";
     if (chapterNumber) {
       input += `/chapter/${chapterNumber}`;
     }

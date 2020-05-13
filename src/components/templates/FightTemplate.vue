@@ -1,23 +1,26 @@
 <template>
-  <div class="pip">
-    <h1>Status</h1>
-    <status-component :entity="pip" />
+  <div class="fight">
+    <h1>Fight</h1>
+    <template v-for="foe in foes">
+      <status-component :entity="foe" :key="foe.name" />
+    </template>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Pip } from "@/types";
+import { Entity } from "@/types";
 import StatusComponent from "@/components/molecules/StatusComponent.vue";
+
 @Component({
   components: { StatusComponent }
 })
-export default class PipTemplate extends Vue {
-  @Prop() private pip!: Pip;
+export default class LogsTemplate extends Vue {
+  @Prop() private foes!: Entity[];
 }
 </script>
 
 <style lang="scss" scoped>
-.pip {
+.fight {
 }
 </style>

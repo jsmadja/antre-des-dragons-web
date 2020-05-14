@@ -14,28 +14,35 @@
           </template>
           <PipTemplate :pip="step.pip" />
         </b-tab>
-        <b-tab title="Inventaire">
+        <!--b-tab title="Inventaire">
           <template v-slot:title>
             <div id="inventory-icon" />
           </template>
           <InventoryTemplate :pip="step.pip" />
-        </b-tab>
-        <b-tab title="Cartes">
+        </b-tab-->
+        <b-tab v-if="step.pip.maps">
           <template v-slot:title>
             <div id="maps-icon" />
           </template>
+          <MapsTemplate :maps="step.pip.maps" />
         </b-tab>
-        <b-tab>
+        <b-tab v-if="step.pip.spellBook">
           <template v-slot:title>
-            <div id="logs-icon" />
+            <div id="spells-icon" />
           </template>
-          <LogsTemplate :entries="step.logEntries" />
+          <SpellBookTemplate :spell-book="step.pip.spellBook" />
         </b-tab>
-        <b-tab>
+        <b-tab v-if="step.foes">
           <template v-slot:title>
             <div id="fight-icon" />
           </template>
           <FightTemplate :foes="step.foes" />
+        </b-tab>
+        <b-tab v-if="step.logEntries">
+          <template v-slot:title>
+            <div id="logs-icon" />
+          </template>
+          <LogsTemplate :entries="step.logEntries" />
         </b-tab>
       </b-tabs>
     </div>
@@ -47,8 +54,10 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import PageTemplate from "./PageTemplate.vue";
 import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
+import MapsTemplate from "./MapsTemplate.vue";
 import InventoryTemplate from "./InventoryTemplate.vue";
 import FightTemplate from "./FightTemplate.vue";
+import SpellBookTemplate from "./SpellBookTemplate.vue";
 import { Step } from "@/types";
 
 @Component({
@@ -57,7 +66,9 @@ import { Step } from "@/types";
     PipTemplate,
     InventoryTemplate,
     LogsTemplate,
-    FightTemplate
+    FightTemplate,
+    MapsTemplate,
+    SpellBookTemplate
   }
 })
 export default class BookTemplate extends Vue {
@@ -77,7 +88,7 @@ export default class BookTemplate extends Vue {
 #page-icon {
   width: 32px;
   height: 32px;
-  background-position: icon(4) icon(13);
+  background-position: icon(11) icon(13);
   background-image: url("/img/rpg-icons.png");
 }
 
@@ -109,10 +120,17 @@ export default class BookTemplate extends Vue {
   background-image: url("/img/rpg-icons.png");
 }
 
+#spells-icon {
+  width: 32px;
+  height: 32px;
+  background-position: icon(7) icon(4);
+  background-image: url("/img/rpg-icons.png");
+}
+
 #logs-icon {
   width: 32px;
   height: 32px;
-  background-position: icon(11) icon(13);
+  background-position: icon(13) icon(13);
   background-image: url("/img/rpg-icons.png");
 }
 </style>

@@ -1,0 +1,380 @@
+{
+  "actions": [
+    {
+      "chapter": 37,
+      "url": "/chapter/37"
+    }
+  ],
+  "logEntries": [
+    {
+      "date": "2020-05-14T18:19:40.409+0000",
+      "type": "MISC",
+      "author": "Homme de Pierre ",
+      "id": "c0b6f8c1-e690-4842-9c02-f4e88a3054c3",
+      "message": "Homme de Pierre  s'équipe de Epée de l'Homme de Pierre"
+    },
+    {
+      "date": "2020-05-14T18:19:40.409+0000",
+      "type": "ITEM",
+      "author": "Homme de Pierre ",
+      "id": "d2239400-bd14-4bcf-8e1d-79c78f87276b",
+      "item": "STONEMAN_SWORD"
+    },
+    {
+      "date": "2020-05-14T18:19:40.411+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "08ad304d-4436-4adf-ad2f-9881dc4a11c8",
+      "value": 4
+    },
+    {
+      "date": "2020-05-14T18:19:40.412+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "940d6664-3f83-4be3-a9a6-528931af82d3",
+      "value": 11
+    },
+    {
+      "date": "2020-05-14T18:19:40.413+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "b83d3bc0-89e6-488e-a435-3679863d21a1",
+      "value": 7
+    },
+    {
+      "date": "2020-05-14T18:19:40.414+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "ee510061-948a-45a3-9d29-982314417991",
+      "value": 4
+    },
+    {
+      "date": "2020-05-14T18:19:40.415+0000",
+      "type": "FIGHT",
+      "author": "Homme de Pierre ",
+      "id": "045ee437-4a8d-4ebc-8aad-68b0523480f8",
+      "message": "Homme de Pierre  rate son attaque vers Pip"
+    },
+    {
+      "date": "2020-05-14T18:19:40.416+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "9d0b0bdd-a2ed-4a23-b790-7d4e5690cf2e",
+      "value": 6
+    },
+    {
+      "date": "2020-05-14T18:19:40.416+0000",
+      "type": "FIGHT",
+      "author": "Homme de Pierre ",
+      "id": "a9fec825-e23c-439c-8521-198d1e885ed0",
+      "message": "Homme de Pierre  fait 5 points de dégâts à Pip"
+    },
+    {
+      "date": "2020-05-14T18:19:40.416+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "5df34da6-525e-42e9-b07c-f8a92e9f8e9d",
+      "value": 9
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "96e08341-d29f-468e-88ba-72078a0acad8",
+      "value": 5
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "FIGHT",
+      "author": "Homme de Pierre ",
+      "id": "9de9741f-8459-4b8a-bbe0-e62640338e1d",
+      "message": "Homme de Pierre  fait 5 points de dégâts à Pip"
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "b1745122-31c4-4e46-a516-d0137a7ece09",
+      "value": 9
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "c0cd4ece-c8e0-4413-834f-a485a60475d8",
+      "value": 9
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "FIGHT",
+      "author": "Homme de Pierre ",
+      "id": "c7c85568-5bda-4497-a829-1f3b3936dfae",
+      "message": "Homme de Pierre  est étourdi"
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "0d40d178-d975-4c28-b976-7c9c9a4912ee",
+      "value": 7
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "3b423024-fb02-4680-b048-516207c70fb3",
+      "value": 8
+    },
+    {
+      "date": "2020-05-14T18:19:40.417+0000",
+      "type": "FIGHT",
+      "author": "Homme de Pierre ",
+      "id": "5cd80f9b-a3c2-4e69-8789-f3ed35a62cb0",
+      "message": "Homme de Pierre  rate son attaque vers Pip"
+    },
+    {
+      "date": "2020-05-14T18:19:40.418+0000",
+      "type": "ROLL",
+      "author": "Homme de Pierre ",
+      "id": "ba869e8f-bc7b-4226-a418-df161f3afdae",
+      "value": 6
+    }
+  ],
+  "pip": {
+    "name": "Pip",
+    "initialHealthPoints": 36,
+    "currentHealthPoints": 26,
+    "maximumHealthPoints": 36,
+    "hitRollRange": {
+      "min": 6,
+      "max": 12
+    },
+    "immuneToPoison": false,
+    "ableToStrikeTwice": false,
+    "magicArmorPoints": {
+      "armorPoints": 0
+    },
+    "magicDamagePoints": {
+      "damagePoints": 0
+    },
+    "inventory": {
+      "items": [
+        "EXCALIBUR_JUNIOR"
+      ],
+      "equipedItems": [
+        "EXCALIBUR_JUNIOR"
+      ],
+      "healingItems": [
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 3
+            },
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 5
+            },
+            {
+              "healthPoints": 6
+            },
+            {
+              "healthPoints": 5
+            },
+            {
+              "healthPoints": 8
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 8
+            },
+            {
+              "healthPoints": 6
+            },
+            {
+              "healthPoints": 5
+            },
+            {
+              "healthPoints": 10
+            },
+            {
+              "healthPoints": 8
+            },
+            {
+              "healthPoints": 9
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 9
+            },
+            {
+              "healthPoints": 11
+            },
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 10
+            },
+            {
+              "healthPoints": 6
+            },
+            {
+              "healthPoints": 5
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        }
+      ],
+      "equipedWeapon": "EXCALIBUR_JUNIOR"
+    },
+    "loseInitiative": false,
+    "sleeping": false,
+    "temporaryDamagePointsMalus": {
+      "damagePoints": 0
+    },
+    "poisoned": false,
+    "invisible": false,
+    "requiredStrikesToHitInvisible": 2147483647,
+    "strikes": 4,
+    "strikesInARow": 4,
+    "missMalusCount": 0,
+    "spellsToCastDuringFight": [],
+    "specialSkills": [],
+    "lostHealthPointsDuringCurrentFight": {
+      "healthPoints": 10
+    },
+    "ableToOpenAnyItem": false,
+    "previousChapter": {
+      "chapter": 12
+    },
+    "nosferaxSnuffBoxUsed": false,
+    "dwarfAnswerOnePrice": null,
+    "dwarfAnswerTwoPrice": null,
+    "maps": [
+      "BEGINNER_MAP",
+      "VILLAGE_WEST",
+      "VILLAGE_EAST",
+      "PARTIAL_DRAGONS_LAIR_MAP"
+    ],
+    "currentChapter": {
+      "visited": true,
+      "text": "L'Homme de Pierre possède 28 POINTS DE VIE. Il n'est pas très agile, et il lui faut donc obtenir au minimum 8, avec les dés, pour vous frapper de son épée. En revanche, cette épée vous infligera 4 Points de Dommage si elle vous touche. Bonne chance !\nSi l'Homme de Pierre vous tue, rendez-vous au [14]. Mais si vous êtes vainqueur, rendez-vous au [37]"
+    },
+    "foe": false,
+    "spellBook": [
+      "AEP",
+      "HEP",
+      "RIP",
+      "FIP",
+      "PAP",
+      "NIP",
+      "MEP",
+      "INVISIBILITY",
+      "FINGER_OF_FIRE",
+      "FIREBALL"
+    ],
+    "dead": false,
+    "additionalDamagePoints": 5,
+    "armorPoints": 0,
+    "equipedWeapon": "EXCALIBUR_JUNIOR",
+    "stuned": false,
+    "adjustedHitRollRange": {
+      "min": 4,
+      "max": 12
+    },
+    "ableToFight": true,
+    "pip": true
+  },
+  "foes": [
+    {
+      "name": "Homme de Pierre ",
+      "initialHealthPoints": 28,
+      "currentHealthPoints": 2,
+      "maximumHealthPoints": 28,
+      "hitRollRange": {
+        "min": 6,
+        "max": 12
+      },
+      "immuneToPoison": false,
+      "ableToStrikeTwice": false,
+      "magicArmorPoints": {
+        "armorPoints": 0
+      },
+      "magicDamagePoints": {
+        "damagePoints": 0
+      },
+      "inventory": {
+        "items": [
+          "STONEMAN_SWORD"
+        ],
+        "equipedItems": [
+          "STONEMAN_SWORD"
+        ],
+        "healingItems": [],
+        "equipedWeapon": "STONEMAN_SWORD"
+      },
+      "loseInitiative": false,
+      "sleeping": false,
+      "temporaryDamagePointsMalus": {
+        "damagePoints": 0
+      },
+      "poisoned": false,
+      "invisible": false,
+      "requiredStrikesToHitInvisible": 2147483647,
+      "strikes": 4,
+      "strikesInARow": 2,
+      "missMalusCount": 0,
+      "spellsToCastDuringFight": [],
+      "specialSkills": [],
+      "lostHealthPointsDuringCurrentFight": {
+        "healthPoints": 26
+      },
+      "foe": true,
+      "dead": false,
+      "additionalDamagePoints": 4,
+      "armorPoints": 0,
+      "equipedWeapon": "STONEMAN_SWORD",
+      "stuned": true,
+      "adjustedHitRollRange": {
+        "min": 8,
+        "max": 12
+      },
+      "ableToFight": false,
+      "pip": false
+    }
+  ],
+  "chapterText": "L'Homme de Pierre possède 28 POINTS DE VIE. Il n'est pas très agile, et il lui faut donc obtenir au minimum 8, avec les dés, pour vous frapper de son épée. En revanche, cette épée vous infligera 4 Points de Dommage si elle vous touche. Bonne chance !\nSi l'Homme de Pierre vous tue, rendez-vous au [14]. Mais si vous êtes vainqueur, rendez-vous au [37]"
+}

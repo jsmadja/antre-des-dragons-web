@@ -1,6 +1,5 @@
 <template>
   <div class="pip">
-    <h1>Status</h1>
     <status-component :entity="pip" />
   </div>
 </template>
@@ -8,7 +7,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Pip } from "@/types";
-import StatusComponent from "@/components/molecules/StatusComponent.vue";
+import StatusComponent from "../molecules/StatusComponent.vue";
 @Component({
   components: { StatusComponent }
 })

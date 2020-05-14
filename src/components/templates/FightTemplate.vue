@@ -1,6 +1,5 @@
 <template>
   <div class="fight">
-    <h1>Fight</h1>
     <template v-for="foe in foes">
       <status-component :entity="foe" :key="foe.name" />
     </template>
@@ -10,7 +9,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Entity } from "@/types";
-import StatusComponent from "@/components/molecules/StatusComponent.vue";
+import StatusComponent from "../molecules/StatusComponent.vue";
 
 @Component({
   components: { StatusComponent }

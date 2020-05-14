@@ -28,6 +28,7 @@ export default class PageTemplate extends Vue {
 
 <style lang="scss" scoped>
 .page {
+  font-family: "Crimson Text", serif;
   overflow: scroll;
   font-size: 1.2rem;
   &__text {

@@ -3,6 +3,7 @@ import BookTemplate from "./BookTemplate.vue";
 import step9 from "./step-9.json";
 import step7 from "./step-7.json";
 import step4 from "./step4.json";
+import step23 from "./step23.json";
 
 storiesOf("BookTemplate", module)
   .add("BookTemplate/Step-9", () => ({
@@ -32,6 +33,16 @@ storiesOf("BookTemplate", module)
     data() {
       return {
         step: step4
+      };
+    }
+  }))
+  .add("BookTemplate/Step23", () => ({
+    components: { BookTemplate },
+    template: `
+        <book-template :step="step" />`,
+    data() {
+      return {
+        step: step23
       };
     }
   }));

@@ -22,6 +22,7 @@ export default class Book extends Vue {
 
   @Watch("$route", { immediate: true, deep: true })
   onUrlChange() {
+    window.scrollTo(0, 0);
     this.fetchStep();
   }
 

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import BookTemplate from "@/components/templates/BookTemplate";
 
 @Component({
@@ -18,6 +18,11 @@ export default class Book extends Vue {
 
   async mounted() {
     await this.fetchStep();
+  }
+
+  @Watch("$route", { immediate: true, deep: true })
+  onUrlChange() {
+    this.fetchStep();
   }
 
   async fetchStep() {

@@ -1,5 +1,5 @@
 <template>
-  <b-link class="action" :href="action.url">
+  <router-link class="action" :to="action.url">
     <b-button block variant="primary">
       {{ action.answer ? action.answer + " - " : "" }}
       {{
@@ -8,7 +8,7 @@
           : `Aller au chapitre ${action.chapter}`
       }}
     </b-button>
-  </b-link>
+  </router-link>
 </template>
 
 <script lang="ts">

@@ -8,7 +8,7 @@
           </template>
           <PageTemplate :step="step" />
         </b-tab>
-        <b-tab title="Pip">
+        <b-tab title="Pip" v-if="step.pip">
           <template v-slot:title>
             <div id="pip-icon" />
           </template>
@@ -20,7 +20,7 @@
           </template>
           <InventoryTemplate :pip="step.pip" />
         </b-tab-->
-        <b-tab v-if="step.pip.maps">
+        <b-tab v-if="step.pip.maps.length > 0">
           <template v-slot:title>
             <div id="maps-icon" />
           </template>
@@ -136,9 +136,10 @@ export default class BookTemplate extends Vue {
 </style>
 <style lang="scss">
 .nav {
+  padding-top: 1rem;
   position: fixed !important;
   bottom: 0 !important;
-  background: #f0f0f0;
+  background: #2f271d;
   width: 100%;
 }
 
@@ -147,6 +148,6 @@ export default class BookTemplate extends Vue {
 }
 
 .book-content {
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 </style>

@@ -21,7 +21,7 @@ export default class PageTemplate extends Vue {
   @Prop() private step!: Step;
 
   toHtml(text: string) {
-    return text.replace(/(\r\n|\n|\r)/g, "<br />");
+    return text.replace(/(\r\n|\n|\r)/g, "<br /><br />");
   }
 }
 </script>
@@ -29,8 +29,13 @@ export default class PageTemplate extends Vue {
 <style lang="scss" scoped>
 .page {
   font-family: "Crimson Text", serif;
-  overflow: scroll;
-  font-size: 1.2rem;
+  overflow: hidden;
+  font-size: 0.9rem;
+
+  h3 {
+    text-align: center;
+  }
+
   &__text {
     margin-bottom: 2rem;
     text-align: justify;
@@ -49,9 +54,9 @@ export default class PageTemplate extends Vue {
   box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3),
     inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
   color: rgba(0, 0, 0, 0.5);
-  padding-top: 2rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   padding-bottom: 0rem;
 }
 </style>

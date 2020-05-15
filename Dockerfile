@@ -1,6 +1,11 @@
-FROM nginx:1.11
 
-MAINTAINER Julien Smadja <julien.smadja@gmail.com>
 
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY dist /usr/share/nginx/html
+APPLICATION
+---> 0..1 PRODUCT
+---> N CONTRACT
+----> 1 API
+
+
+=> <Product, List<Api>>
+
+flatmap( [api] ).grouping(api -> api.getProduct() )

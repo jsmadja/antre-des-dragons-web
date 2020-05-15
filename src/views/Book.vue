@@ -22,7 +22,7 @@ export default class Book extends Vue {
 
   async fetchStep() {
     const { chapterNumber, questionId, answer } = this.$route.params;
-    let input = "/api";
+    let input = "https://antre-des-dragons.herokuapp.com";
     if (chapterNumber) {
       input += `/chapter/${chapterNumber}`;
     }

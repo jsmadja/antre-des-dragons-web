@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Deploy
+
+- npm run build
+- aws s3 sync dist s3://antre-des-dragons/web

@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <h3>{{ step.pip.currentChapter.title }}</h3>
     <div class="page__text" v-html="toHtml(step.chapterText)" />
     <action-component
       v-for="action in step.actions"

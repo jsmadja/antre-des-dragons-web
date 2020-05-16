@@ -1,14 +1,22 @@
+export interface Inventory {
+  healingItems: HealingItem[];
+}
+
 export interface Pip {
   currentHealthPoints: number;
+  inventory: Inventory;
 }
 
 export interface Entity {
   name: string;
+  inventory: Inventory;
 }
 
 export interface Action {
   url: string;
   question: string;
+  chapter: number;
+  answer: string;
 }
 
 export interface Step {

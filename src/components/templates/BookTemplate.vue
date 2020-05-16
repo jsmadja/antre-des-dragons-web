@@ -14,12 +14,6 @@
           </template>
           <PipTemplate :pip="step.pip" />
         </b-tab>
-        <!--b-tab title="Inventaire">
-          <template v-slot:title>
-            <div id="inventory-icon" />
-          </template>
-          <InventoryTemplate :pip="step.pip" />
-        </b-tab-->
         <b-tab v-if="step.pip.maps.length > 0">
           <template v-slot:title>
             <div id="maps-icon" />
@@ -55,7 +49,6 @@ import PageTemplate from "./PageTemplate.vue";
 import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
 import MapsTemplate from "./MapsTemplate.vue";
-import InventoryTemplate from "./InventoryTemplate.vue";
 import FightTemplate from "./FightTemplate.vue";
 import SpellBookTemplate from "./SpellBookTemplate.vue";
 import { Step } from "@/types";
@@ -64,7 +57,6 @@ import { Step } from "@/types";
   components: {
     PageTemplate,
     PipTemplate,
-    InventoryTemplate,
     LogsTemplate,
     FightTemplate,
     MapsTemplate,

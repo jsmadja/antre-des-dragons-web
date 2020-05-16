@@ -28,7 +28,7 @@ export default class Book extends Vue {
 
   async fetchStep() {
     const { chapterNumber, questionId, answer } = this.$route.params;
-    let input = "https://antre-des-dragons.herokuapp.com";
+    let input = process.env.VUE_APP_BACKEND_URL;
     if (chapterNumber) {
       input += `/chapter/${chapterNumber}`;
     }

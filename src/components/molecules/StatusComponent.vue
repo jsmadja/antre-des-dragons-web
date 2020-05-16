@@ -23,6 +23,9 @@
           Hit Roll Range: {{ entity.adjustedHitRollRange.min }} -
           {{ entity.adjustedHitRollRange.max }}
         </p>
+        <p v-if="entity.silverCoins.value">
+          {{ entity.silverCoins.value }} pièces d'argent
+        </p>
         <span v-if="entity.sleeping">Endormi</span>
       </div>
 
@@ -48,10 +51,11 @@
       </div>
       <h2>Consommables</h2>
       <div class="stats">
-        <p v-for="item in entity.inventory.healingItems" :key="item.name">
-          {{ item.name }}
-          <span v-if="item.doses">({{ item.doses.length }} doses)</span>
-        </p>
+        <template v-for="consommable in getConsommables()">
+          <p :key="consommable.key">
+            {{ consommable[0] }} x{{ consommable[1] }}
+          </p>
+        </template>
       </div>
     </section>
   </div>
@@ -60,10 +64,17 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Entity } from "@/types";
+import _ from "lodash";
 
 @Component
 export default class StatusComponent extends Vue {
   @Prop() entity!: Entity;
+
+  getConsommables() {
+    return _(this.entity.inventory.healingItems)
+      .countBy("name")
+      .entries();
+  }
 }
 </script>
 

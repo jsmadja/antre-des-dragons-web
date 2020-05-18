@@ -29,15 +29,14 @@ export default class PageTemplate extends Vue {
 
 <style lang="scss" scoped>
 .page {
-  font-family: "Crimson Text", serif;
-  overflow: hidden;
-  font-size: 0.9rem;
-
   h3 {
     text-align: center;
   }
 
   &__text {
+    font-family: "Crimson Text", serif;
+    overflow: hidden;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
     text-align: justify;
     line-height: 1.4rem;
@@ -58,6 +57,6 @@ export default class PageTemplate extends Vue {
   padding-top: 1rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1.5rem;
 }
 </style>

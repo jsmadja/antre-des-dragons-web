@@ -26,7 +26,11 @@ export interface Step {
   logEntries: LogEntry[];
 }
 
-export type Spell = string;
+export interface Spell {
+  name: string;
+  description: string;
+}
+
 export type SpellBook = Spell[];
 
 export type AdventureMap = string;

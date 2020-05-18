@@ -17,7 +17,7 @@
             dos
           </p>
           <p v-if="log.type === 'MISC'">
-            <b>{{ log.message }}</b>
+            <b>{{ log.author }}</b> {{ log.message }}
           </p>
           <p v-if="log.type === 'FIGHT'">
             <b>{{ log.message }}</b>

@@ -4,6 +4,7 @@ import step9 from "./step-9.json";
 import step7 from "./step-7.json";
 import step4 from "./step4.json";
 import step23 from "./step23.json";
+import step2 from "./step2.json";
 
 storiesOf("BookTemplate", module)
   .add("BookTemplate/Step-9", () => ({
@@ -43,6 +44,16 @@ storiesOf("BookTemplate", module)
     data() {
       return {
         step: step23
+      };
+    }
+  }))
+  .add("BookTemplate/Step2", () => ({
+    components: { BookTemplate },
+    template: `
+        <book-template :step="step" />`,
+    data() {
+      return {
+        step: step2
       };
     }
   }));

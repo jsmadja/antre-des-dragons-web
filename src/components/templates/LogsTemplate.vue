@@ -11,10 +11,6 @@
           <b>{{ log.author }}</b> lance les dés et obtient
           <b>{{ log.value }}</b>
         </p>
-        <p v-if="log.type === 'HEALING_ITEM'">
-          <b>{{ log.author }}</b> ajoute <b>{{ log.healingItem.name }}</b> dans
-          son sac à dos
-        </p>
         <p v-if="log.type === 'ITEM'">
           <b>{{ log.author }}</b> ajoute <b>{{ log.item }}</b> dans son sac à
           dos

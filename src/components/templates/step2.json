@@ -1,0 +1,211 @@
+{
+  "actions": [
+    {
+      "chapter": 4,
+      "url": "/chapter/4"
+    }
+  ],
+  "logEntries": [
+    {
+      "date": "2020-05-18T18:41:55.785+0000",
+      "type": "CHAPTER",
+      "author": "Pip",
+      "chapter": 2,
+      "chapterTitle": "2",
+      "id": 13
+    },
+    {
+      "date": "2020-05-18T18:41:55.785+0000",
+      "type": "ITEM",
+      "author": "Pip",
+      "item": "EXCALIBUR_JUNIOR",
+      "id": 14
+    },
+    {
+      "date": "2020-05-18T18:41:55.785+0000",
+      "type": "MISC",
+      "author": "Pip",
+      "message": "Pip s'équipe de Excalibur Junior",
+      "id": 15
+    }
+  ],
+  "pip": {
+    "name": "Pip",
+    "initialHealthPoints": 32,
+    "currentHealthPoints": 32,
+    "maximumHealthPoints": 32,
+    "hitRollRange": {
+      "min": 6,
+      "max": 12
+    },
+    "immuneToPoison": false,
+    "ableToStrikeTwice": false,
+    "magicArmorPoints": {
+      "armorPoints": 0
+    },
+    "magicDamagePoints": {
+      "damagePoints": 0
+    },
+    "inventory": {
+      "items": [
+        "EXCALIBUR_JUNIOR"
+      ],
+      "equipedItems": [
+        "EXCALIBUR_JUNIOR"
+      ],
+      "healingItems": [
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 8
+            },
+            {
+              "healthPoints": 4
+            },
+            {
+              "healthPoints": 5
+            },
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 8
+            },
+            {
+              "healthPoints": 9
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 10
+            },
+            {
+              "healthPoints": 11
+            },
+            {
+              "healthPoints": 6
+            },
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 5
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Potion Curative",
+          "doses": [
+            {
+              "healthPoints": 7
+            },
+            {
+              "healthPoints": 5
+            },
+            {
+              "healthPoints": 2
+            },
+            {
+              "healthPoints": 3
+            },
+            {
+              "healthPoints": 8
+            },
+            {
+              "healthPoints": 10
+            }
+          ],
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        },
+        {
+          "name": "Onguent",
+          "usable": true
+        }
+      ],
+      "equipedWeapon": "EXCALIBUR_JUNIOR"
+    },
+    "loseInitiative": false,
+    "sleeping": false,
+    "temporaryDamagePointsMalus": {
+      "damagePoints": 0
+    },
+    "poisoned": false,
+    "invisible": false,
+    "requiredStrikesToHitInvisible": 2147483647,
+    "strikes": 0,
+    "strikesInARow": 0,
+    "missMalusCount": 0,
+    "spellsToCastDuringFight": [],
+    "specialSkills": [],
+    "lostHealthPointsDuringCurrentFight": {
+      "healthPoints": 0
+    },
+    "silverCoins": {
+      "value": 0.0
+    },
+    "ableToOpenAnyItem": false,
+    "previousChapter": {
+      "chapter": -7
+    },
+    "nosferaxSnuffBoxUsed": false,
+    "dwarfAnswerOnePrice": null,
+    "dwarfAnswerTwoPrice": null,
+    "maps": [],
+    "currentChapter": {
+      "visited": true,
+      "number": 2,
+      "title": "2",
+      "nextChapter": 4,
+      "text": "Voici, explique Merlin, Excalibur Junior. C'est une épée très spéciale. Je l'ai forgée moi-même, et je suis donc bien placé pour le savoir. Elle est la réplique exacte de l'épée du roi Arthur. La réplique exacte. en plus petit. Et elle parle, contrairement à Excalibur d'Arthur. Sans arrêt, quelquefois. Dis bonjour à Pip, E.J. â votre grande surprise, l'épée déclare docilement : bonjour, Pip. Dans un état proche de l'ébahissement, vous tendez la main et vous saisissez l'épée. Elle est parfaitement équilibrée, légère, mais certainement redoutable.\n—Ouaoh ! vous exclamez-vous, usant d'une expression peu courante à l'époque du roi Arthur. Mais Merlin semble la comprendre.\n—Ouaoh, comme tu dis ! commente-t-il. Quand tu te serviras de cette épée, il te suffira d'obtenir un 4 avec tes deux dés pour frapper un adversaire. Ça fait partie de la magie. Et ce n'est pas tout : tu pourras ajouter 5 points aux Points de Dommage que tu lui causeras. Ça aussi, ça fait partie de la magie.\n—vous avez E.J. bien en main ? Alors, rendez-vous au [4]"
+    },
+    "spellBook": [
+      "AEP",
+      "HEP",
+      "RIP",
+      "FIP",
+      "PAP",
+      "NIP",
+      "MEP",
+      "INVISIBILITY",
+      "FINGER_OF_FIRE",
+      "FIREBALL"
+    ],
+    "dead": false,
+    "additionalDamagePoints": 5,
+    "armorPoints": 0,
+    "adjustedHitRollRange": {
+      "min": 4,
+      "max": 12
+    },
+    "stuned": false,
+    "ableToFight": true,
+    "equipedWeapon": "EXCALIBUR_JUNIOR"
+  },
+  "foes": null,
+  "chapterText": "Voici, explique Merlin, Excalibur Junior. C'est une épée très spéciale. Je l'ai forgée moi-même, et je suis donc bien placé pour le savoir. Elle est la réplique exacte de l'épée du roi Arthur. La réplique exacte. en plus petit. Et elle parle, contrairement à Excalibur d'Arthur. Sans arrêt, quelquefois. Dis bonjour à Pip, E.J. â votre grande surprise, l'épée déclare docilement : bonjour, Pip. Dans un état proche de l'ébahissement, vous tendez la main et vous saisissez l'épée. Elle est parfaitement équilibrée, légère, mais certainement redoutable.\n—Ouaoh ! vous exclamez-vous, usant d'une expression peu courante à l'époque du roi Arthur. Mais Merlin semble la comprendre.\n—Ouaoh, comme tu dis ! commente-t-il. Quand tu te serviras de cette épée, il te suffira d'obtenir un 4 avec tes deux dés pour frapper un adversaire. Ça fait partie de la magie. Et ce n'est pas tout : tu pourras ajouter 5 points aux Points de Dommage que tu lui causeras. Ça aussi, ça fait partie de la magie.\n—vous avez E.J. bien en main ? Alors, rendez-vous au [4]"
+}

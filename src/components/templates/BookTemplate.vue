@@ -8,7 +8,7 @@
           </template>
           <PageTemplate :step="step" />
         </b-tab>
-        <b-tab title="Pip" v-if="step.pip">
+        <b-tab title="Pip" v-if="step.pip.maximumHealthPoints">
           <template v-slot:title>
             <div id="pip-icon" />
           </template>
@@ -20,7 +20,7 @@
           </template>
           <MapsTemplate :maps="step.pip.maps" />
         </b-tab>
-        <b-tab v-if="step.pip.spellBook">
+        <b-tab v-if="step.pip.maximumHealthPoints">
           <template v-slot:title>
             <div id="spells-icon" />
           </template>
@@ -32,7 +32,7 @@
           </template>
           <FightTemplate :foes="step.foes" />
         </b-tab>
-        <b-tab v-if="step.logEntries">
+        <b-tab v-if="step.logEntries.length">
           <template v-slot:title>
             <div id="logs-icon" />
           </template>

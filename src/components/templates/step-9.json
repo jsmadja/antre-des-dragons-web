@@ -1,11 +1,20 @@
 {
   "actions": [
     {
-      "chapter": -9,
-      "url": "http://localhost:8080/chapter/-9"
+      "chapter": -8,
+      "url": "/chapter/-8"
     }
   ],
-  "logEntries": [],
+  "logEntries": [
+    {
+      "date": "2020-05-18T18:37:21.038+0000",
+      "type": "CHAPTER",
+      "author": "Pip",
+      "chapter": 0,
+      "chapterTitle": "Merlin",
+      "id": 1
+    }
+  ],
   "pip": {
     "name": "Pip",
     "initialHealthPoints": 0,
@@ -45,42 +54,47 @@
     "lostHealthPointsDuringCurrentFight": {
       "healthPoints": 0
     },
-    "diary": {
-      "pages": [
-        {
-          "logEntries": [],
-          "size": 0
-        }
-      ],
-      "currentPage": {
-        "logEntries": [],
-        "size": 0
-      }
+    "silverCoins": {
+      "value": 0.0
     },
     "ableToOpenAnyItem": false,
-    "previousChapter": null,
+    "previousChapter": {
+      "chapter": -9
+    },
     "nosferaxSnuffBoxUsed": false,
+    "dwarfAnswerOnePrice": null,
+    "dwarfAnswerTwoPrice": null,
+    "maps": [],
     "currentChapter": {
-      "visited": false,
-      "text": "L'Antre du Dragon est le deuxième volume de la serie intitulée La Quête du Graal. Un livre dont VOUS êtes le héros. Dans quelques pages, vous allez etre précipité à l'époque du roi Arthur, et des Chevaliers de la Table Ronde, dans le fabuleux Royaume d' Avalon terrorisé par des monstres épouvantables, sorciers aux pouvoirs immenses et des êtres malfaisants aux formes les plus répugnantes. C'est de camelot, où siège le roi Arthur entouré de sa cour, que partent les Chevaliers de la Table Ronde en quete de hauts faits à accomplir. Pourtant, c'est  VOUS qui avez été choisi pour entreprendre la mission la plus périlleuse de toutes : poursuivre et faire disparaître à tout jamais un gigantesque Dragon qui ravage le pays, semant sur son chemin la destruction et la mort. Mais votre route est semée d'embûches et de pièges, et vous rencontrerez des créatures infâmes que vous devrez combattre et détruire, au péril de votre vie.\nPour progresser dans ce livre d'aventures, vous avez besoin de deux dés, d'un crayon et d'une gomme. Dressez une carte au fur et à mesure de vos découvertes et de vos rencontres, notez tous les détails de votre mission sur la Feuille d'Aventure que vous trouverez en pages 34 et 35. Et si le personnage que vous allez bientôt rencontrer vous semble quelque peu étourdi et confus, la Règle des Combats que vous trouverez en fin de volume vous sera d'un grand secours. Bonne chance !",
-      "nextChapter": -9
+      "visited": true,
+      "number": 0,
+      "title": "Merlin",
+      "nextChapter": -8,
+      "text": "Allo allo? Il y a quelqu'un ? Vous m'entendez ? vous me recevez ? je parle dans un coquillage. Une conque, pour être precis Quatre chevaliers et un sergent d'armes s'imaginent que je suis devenu cinglé, mais ils ne connaissent rien à la magie. Non. Vraiment rien, lorsqu on est magicien comme moi, on peut se servir d'une conque comme d'un téléphone (ce qui est aussi bien puisque, de mon temps, le téléphone n'avait pas été inventé).\nAllo, il y a quelqu'un à l'autre bout de ma conque ? ici Camelot à l'appareil. Me recevez-vous ? Vous. oui VOUS ! Assis là, en train de lire le livre de la quete du Graal. Il fait partie de ma magie, ce livre, oui,parfaitement. Et il joue un rôle très important. vous etes en train de lire un SORTILÈGE, le saviez-vous Je l'ai écrit moi-même et envoyé à travers le temps sous la forme d'un livre. C'est un sortilège en forme de filet. Il capture votre esprit pendant que lisez le livre. Il le capture comme un poisson. Je releve alors le filet et voilà, que vous vous retrouvez dans mon Époque. Votre esprit, en tout cas. Votre corps quant à lui reste plus ou moins là où il se trouve. vous aimeriez bien visiter mon époque, n'est-ce pas? Elle est pleine de merveilles. Des chevaliers, des ecuyers. des tournois, des quêtes héroïques... C'est le Temps du roi Arthur, le Temps de Camelot et de la Table Ronde.\nJe veux que vous veniez me rendre visite, car j'ai besoin de vous : les Dragons nous posent quelques problèmes. Rien de bien important pour vous, et vous en viendrez vite à bout. Comment faire pour me rejoindre ? Ce n'est pas très compliqué. Continuez seulement à lire ce livre, voilà tout. Tournez encore quelques pages, et le sortilège commencera à opérer. Il n'y a rien de bien difficile à faire, n'est-ce- pas ? Ah, j'allais oublier. En arrivant ici, vous constaterez que vous êtes devenu Pip, le fils adoptif du fermier John et de sa femme Myriam. Pip a mené, ces derniers temps, une vie assez paisible. Mais cela va changer !\nUn dernier détail : il faut que vous vous procuriez des dés. Des dés ordinaires à six faces, avec, si possible, des petits points noirs. Un seul dé peut suffire, mais si vous en trouvez deux ce sera plus pratique. Il vous faut également une feuille de papier, de quoi écrire, et une gomme. Voilà tous les accessoires dont vous aurez besoin. Alors, allez vite les chercher avant d'entreprendre quoi que ce soit d'autre, et en route vers l'aventure !"
     },
-    "currentChapterLogEntries": {
-      "logEntries": [],
-      "size": 0
-    },
-    "foe": false,
+    "spellBook": [
+      "AEP",
+      "HEP",
+      "RIP",
+      "FIP",
+      "PAP",
+      "NIP",
+      "MEP",
+      "INVISIBILITY",
+      "FINGER_OF_FIRE",
+      "FIREBALL"
+    ],
     "dead": false,
-    "equipedWeapon": null,
-    "stuned": false,
+    "additionalDamagePoints": 0,
+    "armorPoints": 0,
     "adjustedHitRollRange": {
       "min": 6,
       "max": 12
     },
+    "stuned": false,
     "ableToFight": true,
-    "pip": true,
-    "additionalDamagePoints": 0,
-    "armorPoints": 0
+    "equipedWeapon": null
   },
-  "chapterText": "L'Antre du Dragon est le deuxième volume de la serie intitulée La Quête du Graal. Un livre dont VOUS êtes le héros. Dans quelques pages, vous allez etre précipité à l'époque du roi Arthur, et des Chevaliers de la Table Ronde, dans le fabuleux Royaume d' Avalon terrorisé par des monstres épouvantables, sorciers aux pouvoirs immenses et des êtres malfaisants aux formes les plus répugnantes. C'est de camelot, où siège le roi Arthur entouré de sa cour, que partent les Chevaliers de la Table Ronde en quete de hauts faits à accomplir. Pourtant, c'est  VOUS qui avez été choisi pour entreprendre la mission la plus périlleuse de toutes : poursuivre et faire disparaître à tout jamais un gigantesque Dragon qui ravage le pays, semant sur son chemin la destruction et la mort. Mais votre route est semée d'embûches et de pièges, et vous rencontrerez des créatures infâmes que vous devrez combattre et détruire, au péril de votre vie.\nPour progresser dans ce livre d'aventures, vous avez besoin de deux dés, d'un crayon et d'une gomme. Dressez une carte au fur et à mesure de vos découvertes et de vos rencontres, notez tous les détails de votre mission sur la Feuille d'Aventure que vous trouverez en pages 34 et 35. Et si le personnage que vous allez bientôt rencontrer vous semble quelque peu étourdi et confus, la Règle des Combats que vous trouverez en fin de volume vous sera d'un grand secours. Bonne chance !"
+  "foes": null,
+  "chapterText": "Allo allo? Il y a quelqu'un ? Vous m'entendez ? vous me recevez ? je parle dans un coquillage. Une conque, pour être precis Quatre chevaliers et un sergent d'armes s'imaginent que je suis devenu cinglé, mais ils ne connaissent rien à la magie. Non. Vraiment rien, lorsqu on est magicien comme moi, on peut se servir d'une conque comme d'un téléphone (ce qui est aussi bien puisque, de mon temps, le téléphone n'avait pas été inventé).\nAllo, il y a quelqu'un à l'autre bout de ma conque ? ici Camelot à l'appareil. Me recevez-vous ? Vous. oui VOUS ! Assis là, en train de lire le livre de la quete du Graal. Il fait partie de ma magie, ce livre, oui,parfaitement. Et il joue un rôle très important. vous etes en train de lire un SORTILÈGE, le saviez-vous Je l'ai écrit moi-même et envoyé à travers le temps sous la forme d'un livre. C'est un sortilège en forme de filet. Il capture votre esprit pendant que lisez le livre. Il le capture comme un poisson. Je releve alors le filet et voilà, que vous vous retrouvez dans mon Époque. Votre esprit, en tout cas. Votre corps quant à lui reste plus ou moins là où il se trouve. vous aimeriez bien visiter mon époque, n'est-ce pas? Elle est pleine de merveilles. Des chevaliers, des ecuyers. des tournois, des quêtes héroïques... C'est le Temps du roi Arthur, le Temps de Camelot et de la Table Ronde.\nJe veux que vous veniez me rendre visite, car j'ai besoin de vous : les Dragons nous posent quelques problèmes. Rien de bien important pour vous, et vous en viendrez vite à bout. Comment faire pour me rejoindre ? Ce n'est pas très compliqué. Continuez seulement à lire ce livre, voilà tout. Tournez encore quelques pages, et le sortilège commencera à opérer. Il n'y a rien de bien difficile à faire, n'est-ce- pas ? Ah, j'allais oublier. En arrivant ici, vous constaterez que vous êtes devenu Pip, le fils adoptif du fermier John et de sa femme Myriam. Pip a mené, ces derniers temps, une vie assez paisible. Mais cela va changer !\nUn dernier détail : il faut que vous vous procuriez des dés. Des dés ordinaires à six faces, avec, si possible, des petits points noirs. Un seul dé peut suffire, mais si vous en trouvez deux ce sera plus pratique. Il vous faut également une feuille de papier, de quoi écrire, et une gomme. Voilà tous les accessoires dont vous aurez besoin. Alors, allez vite les chercher avant d'entreprendre quoi que ce soit d'autre, et en route vers l'aventure !"
 }

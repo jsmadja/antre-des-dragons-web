@@ -4,7 +4,8 @@
     <template v-for="log in entries">
       <div :key="log.id">
         <p v-if="log.type === 'CHAPTER'">
-          <b>{{ log.author }}</b> se rend au chapitre <b>{{ log.chapter }}</b>
+          <b>{{ log.author }}</b> se rend au chapitre
+          <b>{{ log.chapterTitle }}</b>
         </p>
         <p v-if="log.type === 'ROLL'">
           <b>{{ log.author }}</b> lance les dés et obtient

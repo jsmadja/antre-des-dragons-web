@@ -29,9 +29,5 @@ export default class PipTemplate extends Vue {
   box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3),
     inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
   color: rgba(0, 0, 0, 0.5);
-  padding-top: 1rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 </style>

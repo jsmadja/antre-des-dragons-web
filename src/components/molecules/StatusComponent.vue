@@ -27,9 +27,6 @@
           {{ entity.silverCoins.value }} pièces d'argent
         </p>
         <span v-if="entity.sleeping">Endormi</span>
-      </div>
-
-      <div class="stats">
         <p v-if="entity.invisible">Invisible</p>
         <p v-if="entity.immuneToPoison">Immunisé contre le poison</p>
         <p v-if="entity.ableToStrikeTwice">Coup double</p>
@@ -87,7 +84,6 @@ export default class StatusComponent extends Vue {
     padding-right: 0;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
-    // background-image: linear-gradient(to left, #2f271d, #272018);
     &.character {
       padding-left: 0.5rem;
       font-size: 3rem;
@@ -95,21 +91,16 @@ export default class StatusComponent extends Vue {
   }
 
   section {
-    border: solid 1px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
     padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
 
     .stats {
       padding: 1rem;
-      border: solid 1px rgba(0, 0, 0, 0.5);
-      border-radius: 3px;
-      flex-grow: 1;
-      margin-bottom: 1rem;
-      &:first-of-type {
-        margin-right: 0.5rem;
-      }
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      width: 100%;
       p {
         padding: 0;
         margin: 0;

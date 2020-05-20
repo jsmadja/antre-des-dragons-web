@@ -1,7 +1,7 @@
 <template>
   <div class="book">
     <div>
-      <b-tabs content-class="pt-3 pl-3 pr-3 book-content" class="menu-bar">
+      <b-tabs content-class="book-content" class="menu-bar">
         <b-tab active>
           <template v-slot:title>
             <div id="page-icon" />
@@ -74,7 +74,6 @@ export default class BookTemplate extends Vue {
 }
 
 .book {
-  max-height: 100vh;
 }
 
 #page-icon {
@@ -133,6 +132,7 @@ export default class BookTemplate extends Vue {
   bottom: 0 !important;
   background: #2f271d;
   width: 100%;
+  left: 1rem;
 }
 
 .nav-link {
@@ -140,6 +140,6 @@ export default class BookTemplate extends Vue {
 }
 
 .book-content {
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 </style>

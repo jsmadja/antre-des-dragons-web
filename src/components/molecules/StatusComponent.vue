@@ -87,7 +87,7 @@ export default class StatusComponent extends Vue {
     padding-right: 0;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
-    background-image: linear-gradient(to left, #2f271d, #272018);
+    // background-image: linear-gradient(to left, #2f271d, #272018);
     &.character {
       padding-left: 0.5rem;
       font-size: 3rem;
@@ -95,8 +95,7 @@ export default class StatusComponent extends Vue {
   }
 
   section {
-    background: #2f271d;
-    border: solid 1px #231d15;
+    border: solid 1px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     padding: 0.5rem;
     display: flex;
@@ -104,8 +103,7 @@ export default class StatusComponent extends Vue {
 
     .stats {
       padding: 1rem;
-      background: #272018;
-      border: solid 1px #1c1711;
+      border: solid 1px rgba(0, 0, 0, 0.5);
       border-radius: 3px;
       flex-grow: 1;
       margin-bottom: 1rem;

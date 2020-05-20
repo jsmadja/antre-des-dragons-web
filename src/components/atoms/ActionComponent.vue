@@ -30,6 +30,7 @@ export default class ActionComponent extends Vue {
 
 <style lang="scss" scoped>
 .action {
+  font-family: "Crimson Text", serif;
   margin-bottom: 1rem;
   display: block;
 }

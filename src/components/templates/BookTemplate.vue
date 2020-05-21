@@ -12,7 +12,12 @@
           <template v-slot:title>
             <div id="pip-icon" />
           </template>
-          <PipTemplate :pip="step.pip" />
+          <PipTemplate
+            :pip="step.pip"
+            @useHealingItem="$emit('useHealingItem', $event)"
+            @equipItem="$emit('equipItem', $event)"
+            @unequipItem="$emit('unequipItem', $event)"
+          />
         </b-tab>
         <b-tab v-if="step.pip.maps.length > 0">
           <template v-slot:title>

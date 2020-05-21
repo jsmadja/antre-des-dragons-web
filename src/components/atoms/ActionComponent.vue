@@ -33,5 +33,6 @@ export default class ActionComponent extends Vue {
   font-family: "Crimson Text", serif;
   margin-bottom: 1rem;
   display: block;
+  text-decoration: none;
 }
 </style>

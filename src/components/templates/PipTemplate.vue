@@ -1,6 +1,11 @@
 <template>
   <div class="pip">
-    <status-component :entity="pip" />
+    <status-component
+      :entity="pip"
+      @useHealingItem="$emit('useHealingItem', $event)"
+      @equipItem="$emit('equipItem', $event)"
+      @unequipItem="$emit('unequipItem', $event)"
+    />
   </div>
 </template>
 

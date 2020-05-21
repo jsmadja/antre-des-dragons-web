@@ -47,25 +47,48 @@
       </div>
 
       <h2>Objets équipés</h2>
-      <div class="stats">
-        <p v-for="item in entity.inventory.equipedItems" :key="item.name">
+      <div class="stats ">
+        <div
+          v-for="item in entity.inventory.equipedItems"
+          :key="item.name"
+          class="equipable"
+        >
           {{ item.name }}
-        </p>
+          <button
+            @click="unequip(item.name)"
+            class="float-right btn btn-primary btn-sm"
+          >
+            enlever
+          </button>
+        </div>
       </div>
 
       <h2>Objets</h2>
       <div class="stats">
-        <p v-for="item in getItems()" :key="item.name">
+        <div v-for="item in getItems()" :key="item.name" class="equipable">
           {{ item[0] }} <span v-if="item[1] > 1">x{{ item[1] }}</span>
-        </p>
+          <button
+            v-if="isEquipable(item[0])"
+            @click="equip(item[0])"
+            class="float-right btn btn-primary btn-sm"
+          >
+            équiper
+          </button>
+        </div>
       </div>
       <h2>Consommables</h2>
       <div class="stats">
         <template v-for="consommable in getConsommables()">
-          <p :key="consommable.key">
+          <div :key="consommable[0]" class="consommable">
             {{ consommable[0] }}
             <span v-if="consommable[1] > 1">x{{ consommable[1] }}</span>
-          </p>
+            <button
+              @click="use(consommable[0])"
+              class="float-right btn btn-primary btn-sm"
+            >
+              utiliser
+            </button>
+          </div>
         </template>
       </div>
     </section>
@@ -74,7 +97,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Entity, Pip } from "@/types";
+import { Entity, Item, Pip } from "@/types";
 import _ from "lodash";
 
 @Component
@@ -88,9 +111,35 @@ export default class StatusComponent extends Vue {
   }
 
   getItems() {
+    const equipedItemNames = this.entity.inventory.equipedItems.map(
+      i => i.name
+    );
     return _(this.entity.inventory.items)
+      .filter(item => equipedItemNames.indexOf(item.name) < 0)
       .countBy("name")
       .entries();
+  }
+
+  isEquipable(itemName: string) {
+    const item = this.getItemByName(itemName);
+    if (item) return item.armor || item.weapon;
+    return false;
+  }
+
+  getItemByName(itemName: string): Item | undefined {
+    return this.entity.inventory.items.find(i => i.name === itemName);
+  }
+
+  use(healingItemName: string) {
+    this.$emit("useHealingItem", healingItemName);
+  }
+
+  equip(itemName: string) {
+    this.$emit("equipItem", itemName);
+  }
+
+  unequip(itemName: string) {
+    this.$emit("unequipItem", itemName);
   }
 }
 </script>
@@ -125,6 +174,10 @@ export default class StatusComponent extends Vue {
       p {
         padding: 0;
         margin: 0;
+      }
+      .consommable,
+      .equipable {
+        line-height: 2rem;
       }
     }
   }

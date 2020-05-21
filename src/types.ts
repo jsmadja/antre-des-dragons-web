@@ -81,6 +81,8 @@ export interface HealingItem {
 
 export interface Item {
   name: string;
+  armor: boolean;
+  weapon: boolean;
 }
 
 export interface LogEntry {
@@ -96,18 +98,23 @@ export interface LogEntry {
 }
 
 export function formatLogEntry(log: LogEntry): string {
-  switch (log.type) {
-    case "CHAPTER":
-      return `${log.author} se rend au chapitre ${log.chapterTitle}`;
-    case "ROLL":
-      return `${log.author} lance les dés et obtient ${log.value}`;
-    case "ITEM":
-      return `${log.author} ajoute ${log.item} dans son sac à dos`;
-    case "SPELL":
-    case "MISC":
-      return `${log.author} ${log.message}`;
-    case "FIGHT":
-      return `${log.message}`;
+  if (log.type === "CHAPTER") {
+    return `${log.author} se rend au chapitre ${log.chapterTitle}`;
+  }
+  if (log.type === "ROLL") {
+    return `${log.author} lance les dés et obtient ${log.value}`;
+  }
+  if (log.type === "ITEM") {
+    return `${log.author} ajoute ${log.item} dans son sac à dos`;
+  }
+  if (log.type === "SPELL" || log.type === "MISC") {
+    return `${log.author} ${log.message}`;
+  }
+  if (log.type === "FIGHT") {
+    return `${log.message}`;
+  }
+  if (log.type === "HEALING_ITEM" && log.healingItem) {
+    return `${log.author} consomme ${log.healingItem.name}`;
   }
   return JSON.stringify(log);
 }

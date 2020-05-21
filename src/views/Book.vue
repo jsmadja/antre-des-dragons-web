@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <book-template v-if="step" :step="step" />
+    <book-template
+      v-if="step"
+      :step="step"
+      @useHealingItem="useHealingItem"
+      @equipItem="equipItem"
+      @unequipItem="unequipItem"
+    />
   </div>
 </template>
 
@@ -41,6 +47,31 @@ export default class Book extends Vue {
       input += `/${answer}`;
     }
     const response = await fetch(input);
+    this.step = await response.json();
+    this.showLogEntries();
+  }
+
+  async useHealingItem(healingItemName: string) {
+    const input = process.env.VUE_APP_BACKEND_URL || "";
+    const response = await fetch(
+      `${input}/inventory/healingItems/${healingItemName}:use`
+    );
+    this.step = await response.json();
+    this.showLogEntries();
+  }
+
+  async equipItem(itemName: string) {
+    const input = process.env.VUE_APP_BACKEND_URL || "";
+    const response = await fetch(`${input}/inventory/items/${itemName}:equip`);
+    this.step = await response.json();
+    this.showLogEntries();
+  }
+
+  async unequipItem(itemName: string) {
+    const input = process.env.VUE_APP_BACKEND_URL || "";
+    const response = await fetch(
+      `${input}/inventory/items/${itemName}:unequip`
+    );
     this.step = await response.json();
     this.showLogEntries();
   }

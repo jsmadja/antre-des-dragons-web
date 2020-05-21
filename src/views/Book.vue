@@ -4,9 +4,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import BookTemplate from "@/components/templates/BookTemplate";
+import BookTemplate from "@/components/templates/BookTemplate.vue";
+import { formatLogEntry, Step } from "@/types";
 
 @Component({
   components: {
@@ -14,7 +15,8 @@ import BookTemplate from "@/components/templates/BookTemplate";
   }
 })
 export default class Book extends Vue {
-  step = null;
+  [x: string]: any;
+  step?: Step | null = null;
 
   async mounted() {
     await this.fetchStep();
@@ -40,6 +42,29 @@ export default class Book extends Vue {
     }
     const response = await fetch(input);
     this.step = await response.json();
+    this.showLogEntries();
+  }
+
+  showLogEntries() {
+    let delay = 1000;
+    this.step.logEntries
+      .filter(log => log.type !== "CHAPTER")
+      .forEach(logEntry => {
+        setTimeout(
+          () =>
+            this.$bvToast.toast(formatLogEntry(logEntry), {
+              toaster: "b-toaster-bottom-full",
+              noCloseButton: true,
+              toastClass: "toast",
+              bodyClass: "toast__body",
+              autoHideDelay: 1500,
+              appendToast: true,
+              noFade: true
+            }),
+          delay
+        );
+        delay += 1700;
+      });
   }
 }
 </script>

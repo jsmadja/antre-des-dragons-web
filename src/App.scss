@@ -33,10 +33,18 @@ h1, h2, h3 {
   inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
   color: rgba(0, 0, 0, 0.5);
   min-height: 80vh;
-  margin: 1rem 1rem 5rem;
+  margin: 1rem 1rem 8rem;
 }
 
 @font-face {
   font-family: "Breathe-Fire-Font";
   src: url('/fonts/BreatheFire-65pg.ttf');
+}
+
+.toast {
+  bottom: 4rem;
+  position: absolute;
+  &__body {
+    background: rgba(200, 160, 0, 0.1);
+  }
 }

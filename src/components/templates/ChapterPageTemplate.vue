@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h3>{{ step.pip.currentChapter.title }}</h3>
+    <h1>{{ step.pip.currentChapter.title }}</h1>
     <div class="page__text" v-html="toHtml(step.chapterText)" />
     <action-component
       v-for="action in step.actions"
@@ -18,7 +18,7 @@ import { Step } from "@/types";
 @Component({
   components: { ActionComponent }
 })
-export default class PageTemplate extends Vue {
+export default class ChapterPageTemplate extends Vue {
   @Prop() private step!: Step;
 
   toHtml(text: string) {

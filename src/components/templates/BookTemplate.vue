@@ -6,7 +6,7 @@
           <template v-slot:title>
             <div id="page-icon" />
           </template>
-          <PageTemplate :step="step" />
+          <ChapterPageTemplate :step="step" />
         </b-tab>
         <b-tab title="Pip" v-if="step.pip.maximumHealthPoints">
           <template v-slot:title>
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import PageTemplate from "./PageTemplate.vue";
+import ChapterPageTemplate from "./ChapterPageTemplate.vue";
 import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
 import MapsTemplate from "./MapsTemplate.vue";
@@ -55,7 +55,7 @@ import { Step } from "@/types";
 
 @Component({
   components: {
-    PageTemplate,
+    ChapterPageTemplate,
     PipTemplate,
     LogsTemplate,
     FightTemplate,
@@ -127,7 +127,7 @@ export default class BookTemplate extends Vue {
 </style>
 <style lang="scss">
 .nav {
-  padding-top: 1rem;
+  padding-top: 4rem;
   position: fixed !important;
   bottom: 0 !important;
   background: #2f271d;

@@ -30,7 +30,7 @@ export default class Book extends Vue {
 
   async fetchStep() {
     const { chapterNumber, questionId, answer } = this.$route.params;
-    let input = process.env.VUE_APP_BACKEND_URL;
+    let input = process.env.VUE_APP_BACKEND_URL || "";
     if (chapterNumber) {
       input += `/chapter/${chapterNumber}`;
     }
@@ -46,6 +46,9 @@ export default class Book extends Vue {
   }
 
   showLogEntries() {
+    if (!this.step) {
+      return;
+    }
     let delay = 1000;
     this.step.logEntries
       .filter(log => log.type !== "CHAPTER")

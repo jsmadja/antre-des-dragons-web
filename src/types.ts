@@ -26,6 +26,7 @@ export interface Entity {
 export interface Pip extends Entity {
   level: number;
   experiencePoints: number;
+  currentChapter: Chapter;
 }
 
 interface DamagePoints {
@@ -53,6 +54,10 @@ export interface Step {
   actions: Action[];
   chapterText: string;
   logEntries: LogEntry[];
+}
+
+interface Chapter {
+  title: string;
 }
 
 export interface Spell {

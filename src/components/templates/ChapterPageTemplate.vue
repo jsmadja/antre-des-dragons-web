@@ -1,6 +1,13 @@
 <template>
   <div class="page">
     <h1>{{ step.pip.currentChapter.title }}</h1>
+    <b-img
+      v-if="step.pip.currentChapter.illustrated"
+      thumbnail
+      fluid
+      :src="getImageSource()"
+      :alt="step.pip.currentChapter.title + '.png'"
+    />
     <div class="page__text" v-html="toHtml(step.chapterText)" />
     <action-component
       v-for="action in step.actions"
@@ -23,6 +30,10 @@ export default class ChapterPageTemplate extends Vue {
 
   toHtml(text: string) {
     return text.replace(/(\r\n|\n|\r)/g, "<br /><br />");
+  }
+
+  getImageSource() {
+    return `/img/illustrations/${this.step.pip.currentChapter.title}.png`;
   }
 }
 </script>

@@ -56,15 +56,23 @@ export default class Book extends Vue {
     const response = await fetch(
       `${input}/inventory/healingItems/${healingItemName}:use`
     );
-    this.step = await response.json();
-    this.showLogEntries();
+    const fetchedStep = await response.json();
+    if (this.step) {
+      this.step.logEntries = fetchedStep.logEntries;
+      this.step.pip = fetchedStep.pip;
+      this.showLogEntries();
+    }
   }
 
   async equipItem(itemName: string) {
     const input = process.env.VUE_APP_BACKEND_URL || "";
     const response = await fetch(`${input}/inventory/items/${itemName}:equip`);
-    this.step = await response.json();
-    this.showLogEntries();
+    const fetchedStep = await response.json();
+    if (this.step) {
+      this.step.logEntries = fetchedStep.logEntries;
+      this.step.pip = fetchedStep.pip;
+      this.showLogEntries();
+    }
   }
 
   async unequipItem(itemName: string) {
@@ -72,8 +80,12 @@ export default class Book extends Vue {
     const response = await fetch(
       `${input}/inventory/items/${itemName}:unequip`
     );
-    this.step = await response.json();
-    this.showLogEntries();
+    const fetchedStep = await response.json();
+    if (this.step) {
+      this.step.logEntries = fetchedStep.logEntries;
+      this.step.pip = fetchedStep.pip;
+      this.showLogEntries();
+    }
   }
 
   showLogEntries() {

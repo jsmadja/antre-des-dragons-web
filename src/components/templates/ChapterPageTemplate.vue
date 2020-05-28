@@ -10,11 +10,18 @@
       :alt="step.pip.currentChapter.title + '.png'"
     />
     <div class="page__text" v-html="toHtml(step.chapterText)" />
-    <action-component
-      v-for="action in step.actions"
-      :action="action"
-      :key="action.url"
-    />
+
+    <template v-for="foe in step.foes">
+      <status-component :entity="foe" :key="foe.name" />
+    </template>
+
+    <div class="actions">
+      <action-component
+        v-for="action in step.actions"
+        :action="action"
+        :key="action.url"
+      />
+    </div>
   </div>
 </template>
 
@@ -22,9 +29,10 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 import ActionComponent from "../atoms/ActionComponent.vue";
 import { Step } from "@/types";
+import StatusComponent from "@/components/molecules/StatusComponent.vue";
 
 @Component({
-  components: { ActionComponent }
+  components: { ActionComponent, StatusComponent }
 })
 export default class ChapterPageTemplate extends Vue {
   @Prop() private step!: Step;
@@ -44,7 +52,6 @@ export default class ChapterPageTemplate extends Vue {
   &__text {
     overflow: hidden;
     font-size: 0.9rem;
-    margin-bottom: 2rem;
     text-align: justify;
     line-height: 1.4rem;
     font-weight: 600;
@@ -52,6 +59,10 @@ export default class ChapterPageTemplate extends Vue {
 
   .illustration {
     text-align: center;
+  }
+
+  .actions {
+    margin-top: 2rem;
   }
 }
 </style>

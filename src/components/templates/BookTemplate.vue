@@ -31,12 +31,6 @@
           </template>
           <SpellBookTemplate :spell-book="step.pip.spellBook" />
         </b-tab>
-        <b-tab v-if="step.foes">
-          <template v-slot:title>
-            <div id="fight-icon" />
-          </template>
-          <FightTemplate :foes="step.foes" />
-        </b-tab>
         <b-tab v-if="step.logEntries.length">
           <template v-slot:title>
             <div id="logs-icon" />
@@ -60,7 +54,6 @@ import ChapterPageTemplate from "./ChapterPageTemplate.vue";
 import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
 import MapsTemplate from "./MapsTemplate.vue";
-import FightTemplate from "./FightTemplate.vue";
 import NotesTemplate from "./NotesTemplate.vue";
 import SpellBookTemplate from "./SpellBookTemplate.vue";
 import { Step } from "@/types";
@@ -70,7 +63,6 @@ import { Step } from "@/types";
     ChapterPageTemplate,
     PipTemplate,
     LogsTemplate,
-    FightTemplate,
     MapsTemplate,
     SpellBookTemplate,
     NotesTemplate

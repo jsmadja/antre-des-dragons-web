@@ -46,51 +46,53 @@
         </p>
       </div>
 
-      <h2>Objets équipés</h2>
-      <div class="stats ">
-        <div
-          v-for="item in entity.inventory.equipedItems"
-          :key="item.name"
-          class="equipable"
-        >
-          {{ item.name }}
-          <button
-            @click="unequip(item.name)"
-            class="float-right btn btn-primary btn-sm"
+      <template v-if="isPip()">
+        <h2>Objets equipes</h2>
+        <div class="stats ">
+          <div
+            v-for="item in entity.inventory.equipedItems"
+            :key="item.name"
+            class="equipable"
           >
-            enlever
-          </button>
-        </div>
-      </div>
-
-      <h2>Objets</h2>
-      <div class="stats">
-        <div v-for="item in getItems()" :key="item.name" class="equipable">
-          {{ item[0] }} <span v-if="item[1] > 1">x{{ item[1] }}</span>
-          <button
-            v-if="isEquipable(item[0])"
-            @click="equip(item[0])"
-            class="float-right btn btn-primary btn-sm"
-          >
-            équiper
-          </button>
-        </div>
-      </div>
-      <h2>Consommables</h2>
-      <div class="stats">
-        <template v-for="consommable in getConsommables()">
-          <div :key="consommable[0]" class="consommable">
-            {{ consommable[0] }}
-            <span v-if="consommable[1] > 1">x{{ consommable[1] }}</span>
+            {{ item.name }}
             <button
-              @click="use(consommable[0])"
+              @click="unequip(item.name)"
               class="float-right btn btn-primary btn-sm"
             >
-              utiliser
+              enlever
             </button>
           </div>
-        </template>
-      </div>
+        </div>
+
+        <h2>Objets</h2>
+        <div class="stats">
+          <div v-for="item in getItems()" :key="item.name" class="equipable">
+            {{ item[0] }} <span v-if="item[1] > 1">x{{ item[1] }}</span>
+            <button
+              v-if="isEquipable(item[0])"
+              @click="equip(item[0])"
+              class="float-right btn btn-primary btn-sm"
+            >
+              équiper
+            </button>
+          </div>
+        </div>
+        <h2>Consommables</h2>
+        <div class="stats">
+          <template v-for="consommable in getConsommables()">
+            <div :key="consommable[0]" class="consommable">
+              {{ consommable[0] }}
+              <span v-if="consommable[1] > 1">x{{ consommable[1] }}</span>
+              <button
+                @click="use(consommable[0])"
+                class="float-right btn btn-primary btn-sm"
+              >
+                utiliser
+              </button>
+            </div>
+          </template>
+        </div>
+      </template>
     </section>
   </div>
 </template>
@@ -141,18 +143,19 @@ export default class StatusComponent extends Vue {
   unequip(itemName: string) {
     this.$emit("unequipItem", itemName);
   }
+
+  isPip() {
+    return this.entity.name === "Pip";
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .status {
   h2 {
-    font-size: 1.5rem;
     width: 100%;
-    padding-top: 0.5rem;
-    padding-right: 0;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
     &.character {
       padding-left: 0.5rem;
       font-size: 3rem;

@@ -3,6 +3,7 @@
     <h1>{{ step.pip.currentChapter.title }}</h1>
     <b-img
       v-if="step.pip.currentChapter.illustrated"
+      class="illustration"
       thumbnail
       fluid
       :src="getImageSource()"
@@ -47,6 +48,10 @@ export default class ChapterPageTemplate extends Vue {
     text-align: justify;
     line-height: 1.4rem;
     font-weight: 600;
+  }
+
+  .illustration {
+    text-align: center;
   }
 }
 </style>

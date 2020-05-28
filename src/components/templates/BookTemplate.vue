@@ -43,6 +43,12 @@
           </template>
           <LogsTemplate :entries="step.logEntries" />
         </b-tab>
+        <b-tab>
+          <template v-slot:title>
+            <div id="notes-icon" />
+          </template>
+          <NotesTemplate />
+        </b-tab>
       </b-tabs>
     </div>
   </div>
@@ -55,6 +61,7 @@ import PipTemplate from "./PipTemplate.vue";
 import LogsTemplate from "./LogsTemplate.vue";
 import MapsTemplate from "./MapsTemplate.vue";
 import FightTemplate from "./FightTemplate.vue";
+import NotesTemplate from "./NotesTemplate.vue";
 import SpellBookTemplate from "./SpellBookTemplate.vue";
 import { Step } from "@/types";
 
@@ -65,7 +72,8 @@ import { Step } from "@/types";
     LogsTemplate,
     FightTemplate,
     MapsTemplate,
-    SpellBookTemplate
+    SpellBookTemplate,
+    NotesTemplate
   }
 })
 export default class BookTemplate extends Vue {
@@ -127,6 +135,13 @@ export default class BookTemplate extends Vue {
   width: 32px;
   height: 32px;
   background-position: icon(13) icon(13);
+  background-image: url("/img/rpg-icons.png");
+}
+
+#notes-icon {
+  width: 32px;
+  height: 32px;
+  background-position: icon(10) icon(17);
   background-image: url("/img/rpg-icons.png");
 }
 </style>

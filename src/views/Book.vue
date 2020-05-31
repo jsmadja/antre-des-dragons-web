@@ -94,7 +94,7 @@ export default class Book extends Vue {
     }
     let delay = 1000;
     this.step.logEntries
-      .filter(log => log.type !== "CHAPTER")
+      .filter(log => log.type !== "CHAPTER" && log.type !== "ROLL")
       .forEach(logEntry => {
         setTimeout(
           () =>

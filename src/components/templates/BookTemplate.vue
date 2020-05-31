@@ -1,50 +1,48 @@
 <template>
   <div class="book">
-    <div>
-      <b-tabs content-class="book-content" class="menu-bar">
-        <b-tab active>
-          <template v-slot:title>
-            <div id="page-icon" />
-          </template>
-          <ChapterPageTemplate :step="step" />
-        </b-tab>
-        <b-tab title="Pip" v-if="step.pip.maximumHealthPoints">
-          <template v-slot:title>
-            <div id="pip-icon" />
-          </template>
-          <PipTemplate
-            :pip="step.pip"
-            @useHealingItem="$emit('useHealingItem', $event)"
-            @equipItem="$emit('equipItem', $event)"
-            @unequipItem="$emit('unequipItem', $event)"
-          />
-        </b-tab>
-        <b-tab v-if="step.pip.maps.length > 0">
-          <template v-slot:title>
-            <div id="maps-icon" />
-          </template>
-          <MapsTemplate :maps="step.pip.maps" />
-        </b-tab>
-        <b-tab v-if="step.pip.maximumHealthPoints">
-          <template v-slot:title>
-            <div id="spells-icon" />
-          </template>
-          <SpellBookTemplate :spell-book="step.pip.spellBook" />
-        </b-tab>
-        <b-tab v-if="step.logEntries.length">
-          <template v-slot:title>
-            <div id="logs-icon" />
-          </template>
-          <LogsTemplate :entries="step.logEntries" />
-        </b-tab>
-        <b-tab>
-          <template v-slot:title>
-            <div id="notes-icon" />
-          </template>
-          <NotesTemplate />
-        </b-tab>
-      </b-tabs>
-    </div>
+    <b-tabs content-class="book-content" class="menu-bar">
+      <b-tab active>
+        <template v-slot:title>
+          <div id="page-icon" />
+        </template>
+        <ChapterPageTemplate :step="step" />
+      </b-tab>
+      <b-tab title="Pip" v-if="step.pip.maximumHealthPoints">
+        <template v-slot:title>
+          <div id="pip-icon" />
+        </template>
+        <PipTemplate
+          :pip="step.pip"
+          @useHealingItem="$emit('useHealingItem', $event)"
+          @equipItem="$emit('equipItem', $event)"
+          @unequipItem="$emit('unequipItem', $event)"
+        />
+      </b-tab>
+      <b-tab v-if="step.pip.maps.length > 0">
+        <template v-slot:title>
+          <div id="maps-icon" />
+        </template>
+        <MapsTemplate :maps="step.pip.maps" />
+      </b-tab>
+      <b-tab v-if="step.pip.maximumHealthPoints">
+        <template v-slot:title>
+          <div id="spells-icon" />
+        </template>
+        <SpellBookTemplate :spell-book="step.pip.spellBook" />
+      </b-tab>
+      <b-tab v-if="step.logEntries.length">
+        <template v-slot:title>
+          <div id="logs-icon" />
+        </template>
+        <LogsTemplate :entries="step.logEntries" />
+      </b-tab>
+      <b-tab>
+        <template v-slot:title>
+          <div id="notes-icon" />
+        </template>
+        <NotesTemplate />
+      </b-tab>
+    </b-tabs>
   </div>
 </template>
 

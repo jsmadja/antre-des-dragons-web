@@ -137,7 +137,6 @@ export default class BookTemplate extends Vue {
 </style>
 <style lang="scss">
 .nav {
-  padding-top: 4rem;
   position: fixed !important;
   bottom: 0 !important;
   background: #2f271d;

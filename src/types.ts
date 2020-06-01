@@ -24,6 +24,7 @@ export interface Entity {
 }
 
 export interface Pip extends Entity {
+  id: string;
   level: number;
   experiencePoints: number;
   currentChapter: Chapter;

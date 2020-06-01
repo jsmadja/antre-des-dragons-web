@@ -35,8 +35,11 @@ export default class Book extends Vue {
   }
 
   async fetchStep() {
-    const { chapterNumber, questionId, answer } = this.$route.params;
+    const { pipId, chapterNumber, questionId, answer } = this.$route.params;
     let input = process.env.VUE_APP_BACKEND_URL || "";
+    if (pipId) {
+      input += `/${pipId}`;
+    }
     if (chapterNumber) {
       input += `/chapter/${chapterNumber}`;
     }
@@ -54,7 +57,9 @@ export default class Book extends Vue {
   async useHealingItem(healingItemName: string) {
     const input = process.env.VUE_APP_BACKEND_URL || "";
     const response = await fetch(
-      `${input}/inventory/healingItems/${healingItemName}:use`
+      `${input}/${
+        this.step ? this.step.pip.id : ""
+      }/inventory/healingItems/${healingItemName}:use`
     );
     const fetchedStep = await response.json();
     if (this.step) {
@@ -66,7 +71,11 @@ export default class Book extends Vue {
 
   async equipItem(itemName: string) {
     const input = process.env.VUE_APP_BACKEND_URL || "";
-    const response = await fetch(`${input}/inventory/items/${itemName}:equip`);
+    const response = await fetch(
+      `${input}/${
+        this.step ? this.step.pip.id : ""
+      }/inventory/items/${itemName}:equip`
+    );
     const fetchedStep = await response.json();
     if (this.step) {
       this.step.logEntries = fetchedStep.logEntries;
@@ -78,7 +87,9 @@ export default class Book extends Vue {
   async unequipItem(itemName: string) {
     const input = process.env.VUE_APP_BACKEND_URL || "";
     const response = await fetch(
-      `${input}/inventory/items/${itemName}:unequip`
+      `${input}/${
+        this.step ? this.step.pip.id : ""
+      }/inventory/items/${itemName}:unequip`
     );
     const fetchedStep = await response.json();
     if (this.step) {

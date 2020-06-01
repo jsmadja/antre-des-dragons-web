@@ -18,6 +18,7 @@
     <div class="actions">
       <action-component
         v-for="action in step.actions"
+        :pip="step.pip"
         :action="action"
         :key="action.url"
       />

@@ -11,12 +11,12 @@ const routes: Array<RouteConfig> = [
     component: Book
   },
   {
-    path: "/chapter/:chapterNumber",
+    path: "/:pipId/chapter/:chapterNumber",
     name: "Chapter",
     component: Book
   },
   {
-    path: "/chapter/:chapterNumber/questions/:questionId/:answer",
+    path: "/:pipId/chapter/:chapterNumber/questions/:questionId/:answer",
     name: "Answer",
     component: Book
   }

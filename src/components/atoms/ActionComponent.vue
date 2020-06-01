@@ -1,5 +1,5 @@
 <template>
-  <router-link class="action" :to="action.url">
+  <router-link class="action" :to="`/${pip.id}${action.url}`">
     <b-button block variant="primary">
       {{ this.getTitle() }}
     </b-button>
@@ -8,11 +8,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Action } from "@/types";
+import { Action, Pip } from "@/types";
 
 @Component
 export default class ActionComponent extends Vue {
   @Prop() action!: Action;
+  @Prop() pip!: Pip;
 
   getTitle() {
     let title = this.action.answer ? this.action.answer + " - " : "";

@@ -13,7 +13,7 @@
           {{ 20 * entity.level }}
         </p>
         <p v-if="entity.armorPoints">
-          <strong>Armure :</strong> {{ entity.armorPoints }}
+          <strong>Armure :</strong> +{{ entity.armorPoints }}
         </p>
         <p v-if="entity.additionalDamagePoints">
           <strong>Dommages :</strong> +{{ entity.additionalDamagePoints }}

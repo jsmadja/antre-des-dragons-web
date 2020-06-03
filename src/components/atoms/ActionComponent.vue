@@ -1,5 +1,8 @@
 <template>
-  <router-link class="action" :to="`/${pip.id}${action.url}`">
+  <router-link
+    class="action"
+    :to="`/${pip.id}${action.url}?t=${new Date().getTime()}`"
+  >
     <b-button block variant="primary">
       {{ this.getTitle() }}
     </b-button>

@@ -30,7 +30,7 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 import ActionComponent from "../atoms/ActionComponent.vue";
 import { Step } from "@/types";
-import StatusComponent from "@/components/molecules/StatusComponent.vue";
+import StatusComponent from "../molecules/StatusComponent.vue";
 
 @Component({
   components: { ActionComponent, StatusComponent }

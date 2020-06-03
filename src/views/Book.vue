@@ -104,23 +104,28 @@ export default class Book extends Vue {
       return;
     }
     let delay = 1000;
+    let previousText = "";
     this.step.logEntries
       .filter(log => log.type !== "CHAPTER" && log.type !== "ROLL")
       .forEach(logEntry => {
-        setTimeout(
-          () =>
-            this.$bvToast.toast(formatLogEntry(logEntry), {
-              toaster: "b-toaster-bottom-full",
-              noCloseButton: true,
-              toastClass: "toast",
-              bodyClass: "toast__body",
-              autoHideDelay: 1500,
-              appendToast: true,
-              noFade: true
-            }),
-          delay
-        );
-        delay += 1700;
+        const text = formatLogEntry(logEntry);
+        if (text != previousText) {
+          setTimeout(
+            () =>
+              this.$bvToast.toast(text, {
+                toaster: "b-toaster-bottom-full",
+                noCloseButton: true,
+                toastClass: "toast",
+                bodyClass: "toast__body",
+                autoHideDelay: 1500,
+                appendToast: true,
+                noFade: true
+              }),
+            delay
+          );
+          delay += 1700;
+        }
+        previousText = text;
       });
   }
 }
